@@ -1,16 +1,17 @@
 package com.example.mydigikala.Viewmodel
 
+import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.mydigikala.Model.Model_Home
+import com.example.mydigikala.HomeModel
 import com.example.mydigikala.Repository.Api
 import com.example.mydigikala.Repository.Handle_Coroutines
 import com.example.mydigikala.Repository.Handle_Request
 import kotlinx.coroutines.Job
 
-class Viewmode_Home : ViewModel() {
+class HomeViewmodel : ViewModel() {
 
-     val liveHome = MutableLiveData<Model_Home>()
+     val liveHome = MutableLiveData<HomeModel>()
     private lateinit var job : Job
 
 
@@ -22,11 +23,13 @@ class Viewmode_Home : ViewModel() {
     fun getHome(){
      job = Handle_Coroutines.ThreadMain(
          {
-             Handle_Request.Request(Api.invoke().Gethome_Response())
+             Handle_Request.Request(Api.invoke().getHomeResponse())
          }
          ,
          {
+             Log.i("MYTAG", it.toString())
              liveHome.value = it
+
          }
      )
     }

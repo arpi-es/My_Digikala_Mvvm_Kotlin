@@ -8,27 +8,27 @@ import androidx.databinding.BindingAdapter
 import androidx.databinding.DataBindingUtil
 import androidx.viewpager.widget.PagerAdapter
 import com.bumptech.glide.Glide
-import com.example.mydigikala.Model.Model_Home
+import com.example.mydigikala.HomeModel
 import com.example.mydigikala.R
+import com.example.mydigikala.Repository.Api
 import com.example.mydigikala.databinding.ItemsAdapterBinding
 
-class AdapterViewPager(val model : Model_Home) :  PagerAdapter() {
+class AdapterViewPager(val model : HomeModel) :  PagerAdapter() {
     override fun isViewFromObject(view: View, `object`: Any): Boolean {
         return  view==`object`
     }
 
     override fun getCount(): Int {
-        return  model.slider.size
+        return  model.Slider.size
     }
 
     override fun instantiateItem(container: ViewGroup, position: Int): Any {
         val bind:ItemsAdapterBinding = DataBindingUtil.inflate(
             LayoutInflater.from(container.context),
             R.layout.items_adapter, container, false)
-        bind.image = model.slider[position].pic.replace("http://localhost", "http://192.168.0.101")
+        bind.image = model.Slider[position].pic.replace("http://localhost", Api.myIP)
         container.addView(bind.root)
         return bind.root
-
 
     }
 
@@ -36,6 +36,11 @@ class AdapterViewPager(val model : Model_Home) :  PagerAdapter() {
         return container.removeView(`object` as View)
     }
 
+
+    override fun getPageWidth(position: Int): Float {
+       // return super.getPageWidth(position) // 1
+        return 0.96f
+    }
 
     companion object{
         @JvmStatic

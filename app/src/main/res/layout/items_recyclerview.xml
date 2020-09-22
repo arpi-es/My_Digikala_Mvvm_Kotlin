@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable name="data" type="com.example.mydigikala.ProductPourforsh" />
+    </data>
+
+
+    <androidx.cardview.widget.CardView
+        android:layoutDirection="rtl"
+        android:layout_width="250dp"
+        android:layout_height="400dp"
+        app:cardCornerRadius="4dp"
+        android:layout_margin="10dp">
+
+
+        <RelativeLayout
+            android:id="@+id/items0"
+            android:layout_width="250dp"
+            android:layout_height="400dp"
+            android:visibility="gone">
+        
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@mipmap/items"
+                android:scaleType="fitXY"
+               >
+                
+            </ImageView>
+            
+            <TextView
+                android:id="@+id/tv_off"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:textSize="16dp"
+                android:textAlignment="center"
+                android:paddingLeft="30dp"
+                android:layout_marginBottom="29dp"
+                android:layout_alignParentBottom="true"
+                android:text="مشاهده همه"
+                >
+            </TextView>
+            
+            
+            
+            
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/items"
+            android:layout_width="250dp"
+            android:layout_height="420dp">
+
+            <ImageView
+                android:id="@+id/img_post"
+                android:layout_width="150dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="30dp"
+                android:layout_centerHorizontal="true"
+                app:image="@{data.pic}">
+
+
+            </ImageView>
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:textSize="16dp"
+                android:textAlignment="center"
+                android:paddingLeft="30dp"
+                android:layout_marginBottom="29dp"
+                android:layout_below="@id/img_post"
+                android:text="@{data.name}"
+                >
+            </TextView>
+
+
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</layout>

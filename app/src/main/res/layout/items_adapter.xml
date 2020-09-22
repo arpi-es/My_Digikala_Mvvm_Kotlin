@@ -8,14 +8,22 @@
             type="String" />
     </data>
 
-    <ImageView
-        android:id="@+id/img_slider"
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:scaleType="fitXY"
-        app:image="@{image}"
-        >
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp">
 
-    </ImageView>
+
+        <ImageView
+            android:id="@+id/img_slider"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:scaleType="fitXY"
+            app:image="@{image}"
+            >
+        </ImageView>
+
+    </androidx.cardview.widget.CardView>
+
 
 </layout>

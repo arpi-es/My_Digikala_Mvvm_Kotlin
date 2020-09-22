@@ -14,12 +14,10 @@ abstract class Repository {
         val response = work.invoke()
 
         // if isSuccessful and not null return the body, else throw an exeption with the message
-
-        Log.e("TEST" , "HERE")
-        if (response.isSuccessful)
-            Log.e("TEST" , "isSuccessful")
+        if (response.isSuccessful){
             return response.body()!!
-            return throw Exception(response.message())
-
+        }else{
+              throw Exception(response.message())
+        }
     }
 }
