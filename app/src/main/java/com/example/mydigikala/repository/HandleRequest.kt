@@ -1,9 +1,9 @@
-package com.example.mydigikala.Repository
+package com.example.mydigikala.repository
 
 import retrofit2.Response
 
 
-object Handle_Request : Repository() {
+object HandleRequest : Repository() {
 
 
     suspend fun <T:Any>  Request(response: Response<T>) = CustomResponse { response }

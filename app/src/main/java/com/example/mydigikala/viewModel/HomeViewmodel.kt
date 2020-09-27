@@ -1,12 +1,12 @@
-package com.example.mydigikala.Viewmodel
+package com.example.mydigikala.viewModel
 
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.mydigikala.HomeModel
-import com.example.mydigikala.Repository.Api
-import com.example.mydigikala.Repository.Handle_Coroutines
-import com.example.mydigikala.Repository.Handle_Request
+import com.example.mydigikala.model.HomeModel
+import com.example.mydigikala.repository.Api
+import com.example.mydigikala.repository.HandleCoroutines
+import com.example.mydigikala.repository.HandleRequest
 import kotlinx.coroutines.Job
 
 class HomeViewmodel : ViewModel() {
@@ -21,9 +21,9 @@ class HomeViewmodel : ViewModel() {
     //it ro mirizim ti livedatamun ke az tu main ghabele dastresi bashe
 
     fun getHome(){
-     job = Handle_Coroutines.ThreadMain(
+     job = HandleCoroutines.ThreadMain(
          {
-             Handle_Request.Request(Api.invoke().getHomeResponse())
+             HandleRequest.Request(Api.invoke().getHomeResponse())
          }
          ,
          {

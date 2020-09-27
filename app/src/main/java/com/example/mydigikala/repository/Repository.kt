@@ -1,6 +1,5 @@
-package com.example.mydigikala.Repository
+package com.example.mydigikala.repository
 
-import android.util.Log
 import retrofit2.Response
 import java.lang.Exception
 

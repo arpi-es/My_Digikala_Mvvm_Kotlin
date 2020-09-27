@@ -1,4 +1,4 @@
-package com.example.mydigikala
+package com.example.mydigikala.model
 
 data class HomeModel(
     val ProductNew: List<ProductNew>,

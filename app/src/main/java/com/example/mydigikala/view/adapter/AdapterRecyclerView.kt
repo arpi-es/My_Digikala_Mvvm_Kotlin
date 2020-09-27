@@ -1,13 +1,13 @@
-package com.example.mydigikala.View
+package com.example.mydigikala.view.adapter
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.example.mydigikala.ProductPourforsh
+import com.example.mydigikala.model.ProductPourforsh
 import com.example.mydigikala.R
-import com.example.mydigikala.Repository.Api
+import com.example.mydigikala.repository.Api
 import com.example.mydigikala.databinding.ItemsRecyclerviewBinding
 
 class AdapterRecyclerView(private val lstProductPourforsh: List<ProductPourforsh>) : RecyclerView.Adapter<AdapterRecyclerView.AdapterRecyclerViewHolder>() {

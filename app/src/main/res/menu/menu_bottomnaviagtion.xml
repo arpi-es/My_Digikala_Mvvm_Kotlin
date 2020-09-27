@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/Menu_home"
+        android:title="خانه"
+        android:icon="@android:drawable/ic_dialog_info"/>
+
+    <item
+        android:id="@+id/Menu_Cat"
+        android:title="دسته بندی"
+        android:icon="@android:drawable/ic_dialog_dialer"/>
+
+    <item
+        android:id="@+id/Menu_Card"
+        android:title="سبد خرید"
+        android:icon="@android:drawable/ic_input_add"/>
+
+    <item
+        android:id="@+id/Menu_Profile"
+        android:title="دیجی کالا منی"
+        android:icon="@android:drawable/ic_dialog_email"/>
+
+
+</menu>

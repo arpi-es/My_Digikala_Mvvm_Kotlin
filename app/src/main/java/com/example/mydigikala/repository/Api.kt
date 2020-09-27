@@ -1,6 +1,6 @@
-package com.example.mydigikala.Repository
+package com.example.mydigikala.repository
 
-import com.example.mydigikala.HomeModel
+import com.example.mydigikala.model.HomeModel
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -18,8 +18,8 @@ interface Api {
                 .addConverterFactory(GsonConverterFactory.create())
                 .build().create(Api::class.java)
         }
-        const val myIP = "http://192.168.1.3"
-        private const val baseUrl = "http://192.168.1.3/digikala/api/"
+        const val myIP = "http://192.168.0.103"
+        private const val baseUrl = "$myIP/digikala/api/"
 
     }
 

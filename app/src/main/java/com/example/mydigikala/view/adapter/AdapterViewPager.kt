@@ -1,4 +1,4 @@
-package com.example.mydigikala.View
+package com.example.mydigikala.view.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -8,9 +8,9 @@ import androidx.databinding.BindingAdapter
 import androidx.databinding.DataBindingUtil
 import androidx.viewpager.widget.PagerAdapter
 import com.bumptech.glide.Glide
-import com.example.mydigikala.HomeModel
+import com.example.mydigikala.model.HomeModel
 import com.example.mydigikala.R
-import com.example.mydigikala.Repository.Api
+import com.example.mydigikala.repository.Api
 import com.example.mydigikala.databinding.ItemsAdapterBinding
 
 class AdapterViewPager(val model : HomeModel) :  PagerAdapter() {
