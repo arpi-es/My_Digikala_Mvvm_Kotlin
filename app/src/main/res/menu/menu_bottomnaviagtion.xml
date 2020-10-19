@@ -3,22 +3,23 @@
     <item
         android:id="@+id/Menu_home"
         android:title="خانه"
-        android:icon="@android:drawable/ic_dialog_info"/>
+        android:icon="@drawable/baseline_home_24"/>
 
     <item
         android:id="@+id/Menu_Cat"
         android:title="دسته بندی"
-        android:icon="@android:drawable/ic_dialog_dialer"/>
+        android:icon="@drawable/baseline_qr_code_24"/>
 
     <item
         android:id="@+id/Menu_Card"
         android:title="سبد خرید"
-        android:icon="@android:drawable/ic_input_add"/>
+        android:icon="@drawable/baseline_shopping_cart_24"/>
 
     <item
         android:id="@+id/Menu_Profile"
-        android:title="دیجی کالا منی"
-        android:icon="@android:drawable/ic_dialog_email"/>
+        android:title="دیجی کالا من"
+        android:icon="@drawable/baseline_account_circle_24"
+        />
 
 
 </menu>

@@ -7,4 +7,9 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+
+    <style name="BottomNavigationView">
+        <item name="fontFamily">@font/iran</item>
+    </style>
+
 </resources>

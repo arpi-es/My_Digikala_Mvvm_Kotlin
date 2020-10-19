@@ -3,6 +3,7 @@ package com.example.mydigikala.view.activity
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
+import androidx.drawerlayout.widget.DrawerLayout
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
@@ -39,11 +40,15 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
 
 
     override fun onSupportNavigateUp(): Boolean {
-        return super.onSupportNavigateUp()
+        return NavigationUI.navigateUp(navController, null as DrawerLayout)
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
          when(item.itemId){
+
+             R.id.Menu_home ->{
+                 navController.navigate(R.id.homeFragment)
+             }
 
 
 

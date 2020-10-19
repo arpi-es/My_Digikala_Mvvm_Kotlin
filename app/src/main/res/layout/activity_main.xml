@@ -25,6 +25,9 @@
         app:menu="@menu/menu_bottomnaviagtion"
         app:itemIconTint="@color/white"
         app:itemTextColor="@color/white"
+        app:labelVisibilityMode="labeled"
+        app:itemTextAppearanceActive="@style/BottomNavigationView"
+        app:itemTextAppearanceInactive="@style/BottomNavigationView"
         />
 
 
